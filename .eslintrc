@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2017": true,
+    "es6": true
+  },
+  "extends": [
+    "react-app",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-var": "error",
+    "semi": "warn",
+    "prefer-const": "warn",
+    "no-use-before-define": "error",
+    "jsx-quotes": [
+      1,
+      "prefer-double"
+    ],
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks"
+  ]
+}
