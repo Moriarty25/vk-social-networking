@@ -1,4 +1,9 @@
 export enum PATHS {
-    FEED = 'feed',
-    PROFILE = 'profile',
+    FEED = '/feed',
+    FRIENDS = '/friends',
+    MESSAGES = '/messages',
+    SEARCH = '/search',
+    PROFILE = '/profile',
+    HOME = '/',
+
 }

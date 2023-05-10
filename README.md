@@ -6,4 +6,3 @@
 
 * React
 * TypeScript
-* react-transition-group
