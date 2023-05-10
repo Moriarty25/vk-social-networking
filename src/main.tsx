@@ -1,48 +1,23 @@
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+
 import {
 	AdaptivityProvider,
 	ConfigProvider,
-	AppRoot,
-	SplitLayout,
-	SplitCol,
-	View,
-	Panel,
-	PanelHeader,
-	Header,
-	Group,
-	SimpleCell,
+	WebviewType,
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
+import { App } from './App';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './router';
 
-const App = () => {
-	return (
-		<AppRoot>
-			
-			<SplitLayout header={<PanelHeader separator={false} />}>
-				<SplitCol autoSpaced>
-					<View activePanel="main">
-						<Panel id="main">
-							<PanelHeader>VKUI</PanelHeader>
-							<Group header={<Header mode="secondary">Items</Header>}>
-								<SimpleCell>Hello</SimpleCell>
-								<SimpleCell>World</SimpleCell>
-                <RouterProvider router={router} />
-							</Group>
-						</Panel>
-					</View>
-				</SplitCol>
-			</SplitLayout>
-		</AppRoot>
-	);
-};
-
-ReactDOM.render(
-	<ConfigProvider>
+// ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+	
+	<ConfigProvider webviewType={WebviewType.INTERNAL}>
 		<AdaptivityProvider>
-			<App />
+			{/* <App /> */}
+			<RouterProvider router={router}/>
 		</AdaptivityProvider>
 	</ConfigProvider>,
-	document.getElementById('root'),
 );
